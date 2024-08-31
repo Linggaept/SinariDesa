@@ -18,7 +18,7 @@ export default function Traction() {
             </div>
             <div className="flex flex-col bg-yellow-500 bg-opacity-90 p-4 rounded-xl w-11/12 items-center justify-center">
               <h1 className="text-white font-bold text-center text-2xl">500+</h1>
-              <h1 className="text-white font-normal text-center text-md">City</h1>
+              <h1 className="text-white font-normal text-center text-md">Villages</h1>
             </div>
             <div className="flex flex-col bg-yellow-500 bg-opacity-90 p-4 rounded-xl w-11/12 items-center justify-center">
               <h1 className="text-white font-bold text-center text-2xl">250+</h1>

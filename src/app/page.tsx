@@ -17,6 +17,11 @@ import Collab from "./components/Home/Collab";
 import Deck from "./components/Home/Deck";
 import BestProgram from "./components/Home/BestProgram";
 import Testimonial from "./components/Home/Testimonial";
+import PowerIoT from "./components/Home/PowerIoT";
+import InternetOffline from "./components/Home/InternetOffline";
+import SmartAI from "./components/Home/SmartAI";
+import TabelAi from "./components/Home/TabelAi";
+import Blockchain from "./components/Home/Blockchain";
 
 export default function Home() {
   return (
@@ -42,11 +47,26 @@ export default function Home() {
           {/* Support */}
           <Support />
 
+          {/* PowerIoT */}
+          <PowerIoT />
+
+          {/* InternetOffline */}
+          <InternetOffline />
+
           {/* Traction */}
           <Traction />
 
+          {/* Belajar Cerdas */}
+          <SmartAI />
+
+          {/* TabelAi */}
+          <TabelAi />
+
           {/* Superiority */}
           <Superiority />
+
+          {/* Blockchain */}
+          <Blockchain />
 
           {/* Courses */}
           <Courses />
