@@ -4,7 +4,7 @@ export default function Value() {
   return (
     <>
       <section className="min-h-screen flex items-center">
-        <div className="md:p-20 p-14 flex flex-col md:grid md:grid-cols-2 mx-auto w-3/4 gap-6 ">
+        <div className="md:p-20 p-5 flex flex-col md:grid md:grid-cols-2 mx-auto w-3/4 gap-6">
           <div className="flex flex-col gap-8 w-full md:w-3/4">
             <h1 className="text-green-700 font-bold text-2xl md:text-5xl">
               Value Utama Sinari Desa
