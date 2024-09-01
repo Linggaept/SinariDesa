@@ -1,14 +1,26 @@
+/* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+
 const Blockchain = () => {
+  const scrollToCertificateCheck = () => {
+    const element = document.getElementById("CekSertifikat");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <>
-      <section className="p-10 md:p-32">
+      <section className="p-10 md:px-44 md:py-32 min-h-screen mx-auto scroll-smooth">
         {/* Section 1 */}
-        <section>
+        <section
+          className=" flex items-center justify-center justify-items-center min-h-screen"
+          id="CekSertifikat"
+        >
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 ">
               <div className="flex gap-2">
                 <Image
                   src={"/svg/Blockchain.svg"}
@@ -17,8 +29,8 @@ const Blockchain = () => {
                   height={70}
                   className="items-start"
                 />
-                <h1 className="text-black text-3xl lg:text-5xl w-3/4 md:w-7/12">
-                  Blockchain Certification
+                <h1 className="text-black text-3xl lg:text-4xl xl:text-5xl w-3/4 md:w-7/12">
+                  Sertifikasi Blockchain
                 </h1>
               </div>
 
@@ -27,42 +39,42 @@ const Blockchain = () => {
                   <span className="mt-1 ">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Make your Certificate tamper-proof on the blockchain
+                  Buat Sertifikat Anda tahan manipulasi di blockchain.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1 ">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Benefit from the power of blockchain with full privacy control
-                  and vendor independence
+                  Manfaatkan kekuatan blockchain dengan kendali privasi penuh
+                  dan kebebasan dari ketergantungan vendor.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1 ">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Certify one or millions of Sertificate with an
-                  easy-to-integrate solution
+                  Sertifikasi satu atau jutaan Sertifikat dengan solusi yang
+                  mudah diintegrasikan.
                 </h1>
 
                 <Link href={"/"}>
                   <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
-                    <h1 className="text-sm text-white font-normal text-center p-4 ">
-                      Check Your Sertifikat
+                    <h1 className="text-sm text-white font-normal text-center p-4">
+                      Cek Sertifikatmu
                     </h1>
                   </div>
                 </Link>
               </div>
             </div>
 
-            <div className=" ">
+            <div className="flex items-start">
               <Image
                 src={"/img/Blockchain_1.png"}
                 alt="Blockchain"
                 width={400}
                 height={400}
-                className="ml-0 md:ml-20 mb-0 md:mb-20 "
+                className="ml-0 md:ml-40"
               />
             </div>
           </div>
@@ -72,17 +84,6 @@ const Blockchain = () => {
 
         {/* Section 2 */}
         <section>
-          <div className="w-full mx-auto">
-            <div className="flex-col flex mb-10">
-              <h1 className="text-sm text-green-700 ml-0 md:ml-20 underline">
-                How your organization can benefit
-              </h1>
-              <h1 className="text-2xl font-normal text-black ml-0 md:ml-20 ">
-                Profit from the unique advantages of our blockchain
-                certifications
-              </h1>
-            </div>
-          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className=" ">
               <Image
@@ -94,41 +95,41 @@ const Blockchain = () => {
               />
             </div>
             <div className="flex flex-col gap-8 mt-10 md:mt-0">
-              <div className="flex flex-col gap-2">
-                <h1 className="text-black text-xl lg:text-2xl">
-                  Make your Sertificate tamper-proof and prevent Sertificate
-                  fraud risks
+              <div className="flex flex-col gap-2 w-full md:w-3/4">
+                <h1 className="text-black text-xl lg:text-2xl font-bold">
+                  Buat Sertifikat Anda Tahan Manipulasi dan Cegah Risiko
+                  Penipuan Sertifikat
                 </h1>
                 <h1 className="text-black text-sm lg:text-sm">
-                  Your business shouldn’t rely on simple PDF solutions that have
-                  been hacked and manipulated time after time.
+                  Bisnis Anda tidak harus bergantung pada solusi PDF sederhana
+                  yang mudah dipalsukan dan didistribusikan ulang secara online.
                 </h1>
               </div>
 
-              <div className="flex flex-col gap-2 px-5">
+              <div className="flex flex-col gap-2 ml-3 w-full md:w-8/12">
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Certify the digital fingerprints of your documents on +10’000
-                  blockchain nodes
+                  Verifikasi sidik jari digital Sertifikat Anda di lebih dari
+                  100.000 node blockchain.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Benefit from blockchain’s superior security that has no single
-                  point of failure and is virtually impossible to hack
+                  Manfaatkan kekuatan blockchain dengan kendali privasi penuh
+                  dan kebebasan dari ketergantungan vendor.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Separate the certification of your documents from the document
-                  itself to protect yourself against the common vulnerabilities
-                  of virtually all PDF viewers
+                  Pisahkan sertifikasi Sertifikat Anda dari teks Sertifikat
+                  untuk melindungi diri Anda dari risiko umum yang ada pada
+                  penampil PDF yang ada.
                 </h1>
               </div>
             </div>
@@ -141,11 +142,12 @@ const Blockchain = () => {
             <div className="flex flex-col gap-8 mt-10 md:mt-0 ml-0 md:ml-20">
               <div className="flex flex-col gap-2">
                 <h1 className="text-black text-xl font-bold lg:text-2xl">
-                  Stay in full control of your privacy
+                  Amankan Privasi Sertifikat Anda Sepenuhnya
                 </h1>
                 <h1 className="text-black text-sm lg:text-sm">
-                  No document should leave your device and be uploaded to the
-                  cloud by default – neither for certifying nor for verifying.
+                  Tidak ada Sertifikat yang harus meninggalkan perangkat Anda
+                  atau diunggah ke cloud secara default – tidak untuk
+                  pengarsipan atau verifikasi.
                 </h1>
               </div>
 
@@ -154,30 +156,30 @@ const Blockchain = () => {
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Benefit from our privacy-by-design solution where all
-                  documents can be locally processed on your device
+                  Manfaatkan solusi privasi-dari-desain yang memungkinkan semua
+                  Sertifikat diproses secara lokal di perangkat Anda.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Only the unique digital fingerprints of your Sertificate are
-                  certified on the blockchain, but your Sertificate won’t leave
-                  your device
+                  Hanya sidik jari digital unik dari Sertifikat Anda yang
+                  dikontrol oleh blockchain, tetapi Sertifikat Anda tetap berada
+                  di perangkat Anda.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  It is impossible to derive the content of a Sertificate from
-                  its digital fingerprint
+                  Tidak mungkin untuk menguraikan konten Sertifikat dari sidik
+                  jari digitalnya.
                 </h1>
               </div>
             </div>
 
-            <div className=" ">
+            <div className="mt-10 md:mt-0">
               <Image
                 src={"/img/Blockchain_3.png"}
                 alt="Blockchain 2"
@@ -202,39 +204,37 @@ const Blockchain = () => {
               />
             </div>
             <div className="flex flex-col gap-8 mt-10 md:mt-0 ml-0 md:ml-20">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 w-full">
                 <h1 className="text-black text-xl font-bold lg:text-2xl">
-                  Certify right within your existing IT landscape
+                  Sertifikat Langsung di dalam Lanskap IT Anda
                 </h1>
                 <h1 className="text-black text-sm lg:text-sm">
-                  The most intuitive solution doesn’t add any additional
-                  software but can be easily integrated into your existing IT
-                  landscape.
+                  Solusi paling modular tidak memerlukan perangkat lunak
+                  tambahan dan dapat dengan mudah diintegrasikan ke dalam
+                  lanskap IT Anda yang ada.
                 </h1>
               </div>
 
-              <div className="flex flex-col gap-2 px-5">
+              <div className="flex flex-col gap-2 px-5 w-full md:w-3/4">
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Upgrade your existing software with our powerful, yet simple
-                  API
+                  Perbarui sistem yang ada dengan API sederhana namun kuat.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Simply add a “certify” button right in your existing software
+                  Cukup tambahkan tombol "sertifikasi" dalam UI yang sudah ada.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  JS Library, CLI, HTTP Proxy… the choice is yours and readily
-                  availables
+                  Pustaka JS, CLI, HTTP Proxy... pilihannya sudah tersedia.
                 </h1>
               </div>
             </div>
@@ -246,13 +246,13 @@ const Blockchain = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
             <div className="flex flex-col gap-8 mt-10 md:mt-0 ml-0 md:ml-20">
               <div className="flex flex-col gap-2">
-                <h1 className="text-black text-xl lg:text-2xl">
-                  Equip your Sertificate with verifiable trust 
+                <h1 className="text-black text-xl lg:text-2xl font-bold">
+                  Bekali Sertifikat Anda dengan Kepercayaan yang Terverifikasi 
                 </h1>
                 <h1 className="text-black text-sm lg:text-sm">
-                  Because the verification of your Sertificate shouldn’t require
-                  an instruction manual. Everyone should be enabled to verify
-                  your sertificate with just a few clicks and within seconds.
+                  Verifikasi Sertifikat Anda tidak memerlukan alat yang tidak
+                  dikenal. Semua orang harus dapat memverifikasi Sertifikat Anda
+                  dengan hanya satu atau dua klik dan di mana saja.
                 </h1>
               </div>
 
@@ -261,35 +261,34 @@ const Blockchain = () => {
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Allow for intuitive verifications of your Sertificate that can
-                  be done with just a few clicks and within seconds
+                  Tambahkan ke situs web yang ada untuk Sertifikasi yang dapat
+                  dilakukan dengan hanya satu klik dalam semua skenario offline.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Add unparalleled reliability with a powerful verification tool
-                  that spots the change of one single pixel and everything
-                  beyond
+                  Verifikasi Sertifikat dapat dilakukan pada platform
+                  terdesentralisasi yang memanfaatkan node blockchain yang luas.
                 </h1>
 
                 <h1 className="flex items-start gap-2 text-sm lg:text-sm">
                   <span className="mt-1">
                     <IoMdCheckmarkCircle className="text-green-700" />
                   </span>
-                  Embed our verification tool in your website and make it your
-                  own
+                  Sematkan verifikasi pada situs web Anda atau buat situs Anda
+                  sendiri.
                 </h1>
-
-                <Link href={"/"}>
-                  <div className="mt-4 bg-green-700 rounded-md w-full hover:bg-green-600 duration-300">
-                    <h1 className="text-sm text-white font-normal text-center p-4 ">
-                      Avoid diploma fraud: Diploma certification for education
-                      institutions
-                    </h1>
-                  </div>
-                </Link>
+                <div
+                  className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300"
+                  onClick={scrollToCertificateCheck}
+                >
+                  <h1 className="text-sm text-white font-normal text-center p-3">
+                    Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
+                    pendidikan
+                  </h1>
+                </div>
               </div>
             </div>
 
@@ -299,7 +298,7 @@ const Blockchain = () => {
                 alt="Blockchain 2"
                 width={380}
                 height={380}
-                className="ml-0 md:ml-20 "
+                className="ml-0 md:ml-48 "
               />
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 const TabelAi = () => {
   return (
-    <div className="w-full mx-auto p-20">
+    <div className="w-full mx-auto p-10 md:px-44 md:py-16">
       <table className="max-w-screen-xl border-collapse">
         <thead className="invisible md:visible">
           <tr className="bg-gray-200 block md:table-row">
@@ -13,12 +13,12 @@ const TabelAi = () => {
         </thead>
         <tbody>
           <tr className="border-b block md:table-row border-gray-200">
-            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-white w-36">GPT-3.5</td>
+            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-lg text-center text-white w-36">SD-1.1</td>
             <td className="p-2 block md:table-cell">
               <div className="flex items-start space-x-2">
                 {/* <Upload size={20} className="text-green-600 mt-1" /> */}
                 <div>
-                  <div className="font-semibold">Versi 3.5</div>
+                  <div className="font-semibold">Versi 1.1</div>
                   <p className="text-sm">
                     Memiliki efisiensi tinggi dalam hal pemrosesan,
                     menjadikannya ideal untuk tugas-tugas pembelajaran yang
@@ -44,12 +44,12 @@ const TabelAi = () => {
             </td>
           </tr>
           <tr className="border-b border-gray-200 block md:table-row">
-            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-white w-36">GPT-4o mini</td>
+            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-lg text-center text-white w-36">SD-1.2</td>
             <td className="p-2 block md:table-cell">
               <div className="flex items-start space-x-2">
                 {/* <Upload size={20} className="text-green-600 mt-1" /> */}
                 <div>
-                  <div className="font-semibold">Versi 4 mini</div>
+                  <div className="font-semibold">Versi 1.2</div>
                   <p className="text-sm">
                     Merupakan versi yang lebih ringan, dirancang untuk
                     memberikan kecepatan dan efisiensi dalam pembelajaran,
@@ -75,12 +75,12 @@ const TabelAi = () => {
             </td>
           </tr>
           <tr className="block md:table-row">
-            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-white w-36">GPT-4</td>
+            <td className="p-2 font-bold block md:table-cell bg-gray-400 text-lg text-center text-white w-36">SD-2</td>
             <td className="p-2 block md:table-cell">
               <div className="flex items-start space-x-2">
                 {/* <Upload size={20} className="text-green-600 mt-1" /> */}
                 <div>
-                  <div className="font-semibold">Versi 4</div>
+                  <div className="font-semibold">Versi 2</div>
                   <p className="text-sm">
                     Menawarkan kemampuan pemahaman bahasa yang lebih canggih,
                     menjadikannya pilihan yang kuat untuk pembelajaran tingkat

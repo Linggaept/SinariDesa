@@ -3,7 +3,7 @@ import Image from "next/image";
 const InternetOffline = () => {
   return (
     <>
-      <section className="w-full bg-gray-200 p-14 md:p-20">
+      <section className="w-full bg-gray-200 p-10 md:p-20">
         <div className="flex flex-col gap-10">
           <div className="">
             <h1 className="text-black text-3xl font-semibold">
@@ -30,7 +30,7 @@ const InternetOffline = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x divide-gray-200 bg-white gap-10 rounded-3xl">
-            <div className="flex-col p-10">
+            <div className="flex-col md:p-10 p-5">
               <h1 className="text-lg text-green-700 font-semibold">The IoT Gateaway</h1>
               <h1 className="text-gray-700 font-normal text-md mt-4">
                 Gerbang IoT Sinari Desa menggunakan ESP32 untuk menyediakan
@@ -42,7 +42,7 @@ const InternetOffline = () => {
                 teknologi di komunitas pedesaan.
               </h1>
             </div>
-            <div className="flex-col p-10">
+            <div className="flex-col md:p-10 p-5">
               <h1 className="text-lg text-green-700 font-semibold">The Industrial IoT gateway</h1>
               <h1 className="text-gray-700 font-normal text-md mt-4">
                 Gerbang IoT Industri Sinari Desa, juga berbasis ESP32, dirancang

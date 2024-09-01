@@ -12,16 +12,16 @@ import Support from "./components/Home/Support";
 import Traction from "./components/Home/Traction";
 import Superiority from "./components/Home/Superiority";
 import Footer from "./Footer";
-import Courses from "./components/Home/Courses";
-import Collab from "./components/Home/Collab";
-import Deck from "./components/Home/Deck";
 import BestProgram from "./components/Home/BestProgram";
 import Testimonial from "./components/Home/Testimonial";
-import PowerIoT from "./components/Home/PowerIoT";
+import Country3T from "./components/Home/Country3T";
 import InternetOffline from "./components/Home/InternetOffline";
 import SmartAI from "./components/Home/SmartAI";
 import TabelAi from "./components/Home/TabelAi";
 import Blockchain from "./components/Home/Blockchain";
+import LearningBook from "./components/Home/LearningBook";
+import Mentor from "./components/Home/Mentor";
+import LayAi from "./components/LayAi/LayAi";
 
 export default function Home() {
   return (
@@ -30,6 +30,9 @@ export default function Home() {
       <main>
         {/* Navbar */}
         <Navbar />
+
+        {/* LayAi */}
+        <LayAi />
 
         <div className="bg-white">
           {/* Header */}
@@ -47,14 +50,14 @@ export default function Home() {
           {/* Support */}
           <Support />
 
+          {/* Superiority */}
+          <Superiority />
+
           {/* PowerIoT */}
-          <PowerIoT />
+          <Country3T />
 
           {/* InternetOffline */}
           <InternetOffline />
-
-          {/* Traction */}
-          <Traction />
 
           {/* Belajar Cerdas */}
           <SmartAI />
@@ -62,26 +65,23 @@ export default function Home() {
           {/* TabelAi */}
           <TabelAi />
 
-          {/* Superiority */}
-          <Superiority />
-
           {/* Blockchain */}
           <Blockchain />
 
-          {/* Courses */}
-          <Courses />
+          {/* LearningBook */}
+          <LearningBook />
 
-          {/* Collab */}
-          <Collab />
-
-          {/* Deck */}
-          <Deck />
+          {/* Traction */}
+          <Traction />
 
           {/* Best Program */}
           <BestProgram />
 
           {/* Testimonial */}
           <Testimonial />
+
+          {/* Mentor */}
+          <Mentor />
 
           {/* Footer */}
           <Footer />

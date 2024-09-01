@@ -1,14 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const SmartAI = () => {
   return (
     <>
       <section className="bg-gray-50">
-        <div className="flex flex-col p-14 md:p-20 gap-10">
+        <div className="flex flex-col p-10 md:py-20 md:px-44 gap-10">
           <div className="flex flex-col items-center text-center gap-5">
             <h1 className="text-4xl font-bold text-black">
               Belajar Cerdas dengan AI{" "}
-              <span className="text-green-700">Sinari Desa</span>
+              <span className="text-indigo-600">Sinari Desa</span>
             </h1>
             <h1 className="text-gray-600 text-md">
               AI SINARI DESA menggabungkan kecerdasan buatan yang kuat dengan
@@ -17,16 +18,16 @@ const SmartAI = () => {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 ">
             <div className="flex flex-col gap-5 w-10/12">
               <div className="flex md:w-6/12 w-10/12 ">
                 <h1 className="text-3xl font-bold">
-                  <span className="text-yellow-600">Belajar</span> Mudah di{" "}
-                  <span className="text-yellow-600">Ujung Jari Anda</span>
+                  <span className="text-indigo-600">Belajar</span> Mudah di{" "}
+                  <span className="text-indigo-600">Ujung Jari Anda</span>
                 </h1>
               </div>
               <div className="flex flex-col gap-5">
-                <div className="bg-yellow-600 p-4 border-l-8 border-yellow-800">
+                <div className="bg-indigo-600 p-4 border-l-8 border-indigo-800">
                   <h1 className="text-md text-white font-normal">
                     <span className="font-bold">
                       Peringkasan dengan Satu Klik
@@ -60,7 +61,7 @@ const SmartAI = () => {
                 </div>
 
                 <Link href={"/"}>
-                  <div className="bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
+                  <div className="bg-indigo-600 rounded-md w-full md:w-7/12 hover:bg-indigo-500 duration-300">
                     <h1 className="text-sm text-white font-normal text-center p-4 ">
                       Coba Gratis Sekarang
                     </h1>
@@ -70,7 +71,12 @@ const SmartAI = () => {
             </div>
 
             <div className="">
-              <h1>gambar</h1>
+              <Image 
+                src={"/img/Ai.png"}
+                alt="Smart AI"
+                width={500}
+                height={500}
+              />
             </div>
 
           </div>

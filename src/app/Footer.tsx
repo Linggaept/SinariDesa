@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <>
       <footer className="w-full bg-green-700">
-        <div className="w-3/4 p-10 md:p-20 flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 mx-auto gap-10">
+        <div className="w-3/4 py-10 px-2 md:p-20 flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 mx-auto gap-10">
 
           <div className="flex flex-col">
             <h1 className="text-yellow-500 font-bold text-3xl">Get Contact</h1>
@@ -39,24 +39,24 @@ export default function Footer() {
               <input
                 type="text"
                 placeholder="Nama"
-                className="w-48 md:w-72 rounded-md p-2 text-xs"
+                className="w-52 md:w-72 rounded-md p-2 text-xs"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-48 md:w-72 rounded-md p-2 text-xs"
+                className="w-52 md:w-72 rounded-md p-2 text-xs"
               />
               <input
                 type="text"
                 placeholder="Phone"
-                className="w-48 md:w-72 rounded-md p-2 text-xs"
+                className="w-52 md:w-72 rounded-md p-2 text-xs"
               />
               <textarea
                 name="deskripsi"
                 id="deskripsi"
-                className="h-20 rounded-md text-xs w-48 md:w-72"
+                className="h-20 rounded-md text-xs w-52 md:w-72"
               ></textarea>
-              <button className="bg-yellow-500 text-white  p-2 rounded-md w-48 md:w-72">
+              <button className="bg-yellow-500 text-white  p-2 rounded-md w-52 md:w-72">
                 Send
               </button>
             </form>

@@ -28,16 +28,16 @@ export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Box>
+    <Box position={"fixed"} top={0} left={0} right={0}>
       <Flex
-        bg={useColorModeValue("green.700", "green.700")}
+        className="bg-green-700"
         color={useColorModeValue("black", "black")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
         borderStyle={"solid"}
-        borderColor={useColorModeValue("green.700", "green.700")}
+        borderColor={useColorModeValue("white", "white")}
         align={"center"}
       >
         <Flex
@@ -187,7 +187,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle}>
+    <Stack spacing={4} onClick={children && onToggle} position={"fixed"}>
       <Box
         py={2}
         as="a"
@@ -246,58 +246,30 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Home",
-    href: "/",
+    href: "/#home",
   },
   {
-    label: "Services",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
+    label: "Visi & Misi",
+    href: "/#visi-misi",
   },
   {
-    label: "Product",
-    children: [
-      {
-        label: "Flashdisk",
-        subLabel: "Akses pembelajaran dengan Internet Offline Sinari Desa",
-        href: "/product/flashdisk",
-      },
-    ],
+    label: "Produk",
+    href : "/products",
+  },
+  {
+    label: "Ai Sinari Desa",
+    href: "/ai-sinari-desa",
   },
   {
     label: "Event",
-    children: [
-      {
-        label: "Job Board",
-        subLabel: "Find your dream design job",
-        href: "#",
-      },
-      {
-        label: "Freelance Projects",
-        subLabel: "An exclusive list for contract work",
-        href: "#",
-      },
-    ],
-  },
-  {
-    label: "Creation",
     href: "#",
   },
   {
-    label: "Blog",
+    label: "Course",
     href: "#",
   },
   {
-    label: "Scan Sertificate",
+    label: "Contact Us",
     href: "#",
   },
 ];

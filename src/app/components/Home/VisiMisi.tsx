@@ -7,12 +7,12 @@ import { TbAward } from "react-icons/tb";
 export default function VisiMisi() {
   return (
     <>
-      <section className="min-h-screen flex items-center">
+      <section className="min-h-screen flex items-center" id="visi-misi">
         <div className="p-10 md:p-20 items-center">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-20 w-3/4 mx-auto items-center">
             <div className="">
               <Image
-                src={"/img/Visi_Misi.png"}
+                src={"/img/Visi_misi.jpg"}
                 alt="Visi dan Misi"
                 width={500}
                 height={500}
