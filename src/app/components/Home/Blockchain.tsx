@@ -13,7 +13,7 @@ const Blockchain = () => {
 
   return (
     <>
-      <section className="p-10 md:px-44 md:py-32 min-h-screen mx-auto scroll-smooth">
+      <section className="p-10 md:px-44 md:py-32 min-h-screen mx-auto scroll-smooth" id="Blockchain">
         {/* Section 1 */}
         <section
           className=" flex items-center justify-center justify-items-center min-h-screen"

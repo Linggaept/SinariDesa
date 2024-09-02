@@ -187,7 +187,7 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
-    <Stack spacing={4} onClick={children && onToggle} position={"fixed"}>
+    <Stack spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
         as="a"
@@ -254,22 +254,26 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "Produk",
-    href : "/products",
+    href : "/#produk",
   },
   {
     label: "Ai Sinari Desa",
-    href: "/ai-sinari-desa",
+    href: "/#SmartAi",
   },
   {
-    label: "Event",
-    href: "#",
+    label: "Blockhain",
+    href: "/#Blockchain",
   },
   {
-    label: "Course",
-    href: "#",
+    label: "Courses",
+    href: "/#Courses",
+  },
+  {
+    label: "Mentor",
+    href: "/#Mentor",
   },
   {
     label: "Contact Us",
-    href: "#",
+    href: "/#ContactUs",
   },
 ];

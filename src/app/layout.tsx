@@ -14,6 +14,9 @@ const poppins = Poppins({
 // Metadata yang digunakan oleh Next.js untuk pengaturan SEO dan lainnya
 export const metadata: Metadata = {
   title: "SinariDesa",
+  icons: {
+    icon: "/icon.png",
+  }
 };
 
 export default function RootLayout({

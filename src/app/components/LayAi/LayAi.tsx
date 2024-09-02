@@ -28,7 +28,7 @@ export default function LayAi() {
         <ModalOverlay />
         <ModalContent className="h-5/6">
           <ModalHeader className="text-indigo-600">Sinari Desa Ai</ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton onClick={() => setMessage(false)} />
           <ModalBody>
             <Text fontWeight="semibold" mb="1rem" className="duration-300">
               {message ? "Maaf, Ai Sedang Dalam Pengembangan" : ""}

@@ -5,7 +5,7 @@ import { FaYoutube } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <footer className="w-full bg-green-700">
+      <footer className="w-full bg-green-700" id="ContactUs">
         <div className="w-3/4 py-10 px-2 md:p-20 flex flex-col md:grid md:grid-cols-2 xl:grid-cols-3 mx-auto gap-10">
 
           <div className="flex flex-col">
