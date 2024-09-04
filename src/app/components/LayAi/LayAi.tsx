@@ -31,6 +31,7 @@ export default function LayAi() {
 
       <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
+
         <ModalContent className="h-5/6">
           <ModalHeader className="text-indigo-600">Sinari Desa Ai</ModalHeader>
           <ModalCloseButton onClick={() => setMessage(false)} />
