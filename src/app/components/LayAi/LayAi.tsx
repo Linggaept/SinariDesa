@@ -10,11 +10,16 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 export default function LayAi() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [message, setMessage] = useState<boolean>(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setMessage(true);
+  };
 
   return (
     <>
@@ -36,14 +41,21 @@ export default function LayAi() {
           </ModalBody>
 
           <ModalFooter>
-            <div className="flex w-full gap-2">
-              <input
-                type="text"
-                placeholder="Your Text"
-                className="w-full rounded-md p-2 border-none bg-gray-200"
-              />
-              <Button className="bg-blue-600 text-white" onClick={() => setMessage(true)}>Send</Button>
-            </div>
+            <form
+              onSubmit={(e) => handleSubmit(e)}
+              className="flex w-full"
+            >
+              <div className="flex w-full gap-2">
+                <input
+                  type="text"
+                  placeholder="Your Text"
+                  className="w-full rounded-md p-2 border-none bg-gray-200"
+                />
+                <Button type="submit" className="bg-blue-600 text-white">
+                  Send
+                </Button>
+              </div>
+            </form>
           </ModalFooter>
         </ModalContent>
       </Modal>

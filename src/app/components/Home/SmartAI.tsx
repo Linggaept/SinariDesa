@@ -76,6 +76,7 @@ const SmartAI = () => {
                 alt="Smart AI"
                 width={500}
                 height={500}
+                className="object-cover aspect-square"
               />
             </div>
 

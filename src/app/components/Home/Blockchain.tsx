@@ -276,14 +276,14 @@ const Blockchain = () => {
                   Sematkan verifikasi pada situs web Anda atau buat situs Anda
                   sendiri.
                 </h1>
-                <Link href="/#CekSertifikat">
+                <a href="/#CekSertifikat">
                   <div className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300">
                     <h1 className="text-sm text-white font-normal text-center p-3">
                       Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
                       pendidikan
                     </h1>
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
 

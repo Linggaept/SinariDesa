@@ -6,7 +6,7 @@ export default function Header() {
     <>
       <section className="min-h-screen overflow-hidden mt-10" id="home">
         <div className="bg-[url('/img/Wpp.jpg')] bg-cover bg-center">
-          <div className="bg-gray-700 bg-opacity-60 px-20 py-16">
+          <div className="bg-gray-700 bg-opacity-60 px-10 md:px-20 py-16">
             <div className="flex flex-col gap-6">
               <h1 className="text-md md:text-lg font-normal text-white text-center w-full mx-auto">
                 Selamat Datang di Ekosistem Tumbuh Sinari Desa

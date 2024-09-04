@@ -21,7 +21,7 @@ export default function Value() {
               alt="Belajar di desa"
               width={500}
               height={500}
-              className="rounded-3xl ratio-square object-cover"
+              className="rounded-3xl aspect-[12/8] object-cover "
             />
           </div>
         </div>
