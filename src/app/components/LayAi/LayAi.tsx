@@ -18,8 +18,8 @@ export default function LayAi() {
 
   return (
     <>
-      <div className="fixed bottom-10 right-10 bg-indigo-600">
-        <Button onClick={onOpen} className="bg-indigo-600">
+      <div className="fixed bottom-10 right-10 bg-green-700 p-1 rounded-md">
+        <Button onClick={onOpen} className="bg-indigo-600 ">
           <span className="text-black">Open Ai</span>
         </Button>
       </div>

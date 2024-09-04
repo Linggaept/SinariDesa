@@ -13,7 +13,7 @@ export default function Superiority() {
       <section className="w-full bg-gray-900 min-h-screen">
         <div className="w-3/4 mx-auto p-5 md:p-20">
           <div className="flex flex-col gap-8">
-            <h1 className="text-white font-bold text-xl md:text-3xl text-center">
+            <h1 className="text-white font-bold text-3xl md:text-5xl text-center">
               Keunggulan Kami
             </h1>
             <h1 className="text-gray-100 font-normal text-xs md:text-sm text-center">

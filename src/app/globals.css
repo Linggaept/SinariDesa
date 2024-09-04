@@ -4,6 +4,7 @@
 
 /* styles/globals.css */
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    scroll-behavior: smooth !important;
 }

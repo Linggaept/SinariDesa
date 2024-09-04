@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "SinariDesa",
   icons: {
     icon: "/icon.png",
-  }
+  },
 };
 
 export default function RootLayout({
@@ -27,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <Providers>
-        {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

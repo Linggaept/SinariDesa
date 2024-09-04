@@ -4,16 +4,12 @@ import Link from "next/link";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 
 const Blockchain = () => {
-  const scrollToCertificateCheck = () => {
-    const element = document.getElementById("CekSertifikat");
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
   return (
     <>
-      <section className="p-10 md:px-44 md:py-32 min-h-screen mx-auto scroll-smooth" id="Blockchain">
+      <section
+        className="p-10 md:px-44 md:py-32 min-h-screen mx-auto"
+        id="Blockchain"
+      >
         {/* Section 1 */}
         <section
           className=" flex items-center justify-center justify-items-center min-h-screen"
@@ -280,25 +276,24 @@ const Blockchain = () => {
                   Sematkan verifikasi pada situs web Anda atau buat situs Anda
                   sendiri.
                 </h1>
-                <div
-                  className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300"
-                  onClick={scrollToCertificateCheck}
-                >
-                  <h1 className="text-sm text-white font-normal text-center p-3">
-                    Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
-                    pendidikan
-                  </h1>
-                </div>
+                <Link href="/#CekSertifikat">
+                  <div className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300">
+                    <h1 className="text-sm text-white font-normal text-center p-3">
+                      Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
+                      pendidikan
+                    </h1>
+                  </div>
+                </Link>
               </div>
             </div>
 
-            <div className=" ">
+            <div className="">
               <Image
                 src={"/img/Blockchain_5.png"}
                 alt="Blockchain 2"
                 width={380}
                 height={380}
-                className="ml-0 md:ml-48 "
+                className="ml-30 w-52 sm:w-2/4 md:w-3/4 xl:ml-48  aspect-square object-cover mx-auto justify-center items-center flex"
               />
             </div>
           </div>

@@ -5,8 +5,8 @@ export default function Value() {
     <>
       <section className="min-h-screen flex items-center">
         <div className="md:p-20 p-5 flex flex-col md:grid xl:grid-cols-2 mx-auto w-3/4 gap-6">
-          <div className="flex flex-col gap-8 w-full md:w-3/4">
-            <h1 className="text-green-700 font-bold text-2xl md:text-5xl">
+          <div className="flex flex-col gap-8 w-full md:w-3/4 mx-auto">
+            <h1 className="text-green-700 font-bold text-2xl md:text-5xl  ">
               Value Utama Sinari Desa
             </h1>
             <h1 className="text-gray-600 font-normal text-xs md:text-xl mt-2 md:mt-10">
@@ -15,7 +15,7 @@ export default function Value() {
               potensi mereka untuk berkembang dan bersaing di pasar global.
             </h1>
           </div>
-          <div className="flex mt-10 md:mt-0">
+          <div className="flex mt-10 md:mt-0 mx-auto">
             <Image
               src="/img/Value.png"
               alt="Belajar di desa"

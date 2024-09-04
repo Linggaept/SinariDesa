@@ -39,7 +39,7 @@ const Mentor = () => {
     },
     {
       img: "Mentor_4",
-      name: "M. Gusbayu Aji S LC.M.S.I",
+      name: "M. Gusbayu Aji",
       role: [
         "Founder & CEO Ekosistem @tlcnesia.id",
         "MBA in Business Communication",
@@ -51,7 +51,7 @@ const Mentor = () => {
     },
     {
       img: "Mentor_5",
-      name: "Afrian Dicky Prasetya S. Dawet",
+      name: "Afrian Dicky Prasetya",
       role: [
         "Chief Commercial Officer (CCO) of @tlcnesia.id",
         "Mentor Data Visualization, Digital Marketing BNSP, & Certified Office Master from U.S.A",
@@ -59,7 +59,7 @@ const Mentor = () => {
       ],
     },
     {
-      img: "Mentor_5",
+      img: "Mentor_6",
       name: "Azhar Surya Pratama S. Kom",
       role: [
         "Chief Operation Officer (COO) & HR @tlcnesia.id",
@@ -85,11 +85,11 @@ const Mentor = () => {
               >
                 <div className="mx-auto bg-red-800 p-2 rounded-full">
                   <Image
-                    src={`/img/${mentor.img}.png`}
+                    src={`/img/${mentor.img}.jpg`}
                     alt="Belajar di desa"
                     width={180}
                     height={180}
-                    className="rounded-full object-cover"
+                    className="rounded-full object-cover object-top aspect-square"
                   />
                 </div>
                 <div className="mx-auto">
@@ -98,9 +98,9 @@ const Mentor = () => {
 
                 <div className="flex flex-col gap-2 mt-4 text-left">
                   {mentor.role.map((role, roleIndex) => (
-                    <div key={roleIndex} className="flex items-center">
-                      <CgEditBlackPoint className="text-red-800 mr-2" />
-                      <span className="text-gray-700">{role}</span>
+                    <div key={roleIndex} className="flex items-start gap-2">
+                      <CgEditBlackPoint className="text-red-800 w-3 h-3 mt-1.5" />
+                      <span className="text-gray-700 w-11/12">{role}</span>
                     </div>
                   ))}
                 </div>
