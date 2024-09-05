@@ -41,7 +41,7 @@ const LearningBook = () => {
 
   return (
     <>
-      <section className="p-10 md:py-20 lg:px-72" id="Courses">
+      <section className="p-10 md:py-20 lg:px-72 scroll-mt-14 md:scroll-mt-0" id="Courses" >
 
         <div className="flex flex-col gap-5">
           <h1 className="text-3xl font-bold text-center">

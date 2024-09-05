@@ -71,7 +71,7 @@ const Mentor = () => {
 
   return (
     <>
-      <section className="p-10 md:p-32" id="Mentor">
+      <section className="p-10 md:p-32 scroll-mt-14 md:scroll-mt-0" id="Mentor">
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold text-red-800 text-center mb-32">
             Dewan Penasihat, Pelatih Utama, & Mentor

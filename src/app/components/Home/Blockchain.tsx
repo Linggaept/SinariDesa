@@ -2,20 +2,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+import { useRef } from "react";
 
 const Blockchain = () => {
+  const linkRef = useRef<HTMLDivElement > (null);
+
+  const goto = (current: HTMLDivElement | null) => {
+    window.scrollTo({
+      top: current?.offsetTop,
+      left: 0,
+      behavior: "smooth",
+    })
+  }
   return (
     <>
       <section
-        className="p-10 md:px-44 md:py-32 min-h-screen mx-auto"
+        className="p-10 md:px-44 md:py-10 min-h-screen mx-auto"
         id="Blockchain"
       >
         {/* Section 1 */}
         <section
           className=" flex items-center justify-center justify-items-center min-h-screen"
           id="CekSertifikat"
+          ref={linkRef}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2" >
             <div className="flex flex-col gap-8 ">
               <div className="flex gap-2">
                 <Image
@@ -54,13 +65,13 @@ const Blockchain = () => {
                   mudah diintegrasikan.
                 </h1>
 
-                <Link href={"/"}>
+                <a href="/">
                   <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
                     <h1 className="text-sm text-white font-normal text-center p-4">
                       Cek Sertifikatmu
                     </h1>
                   </div>
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -276,14 +287,15 @@ const Blockchain = () => {
                   Sematkan verifikasi pada situs web Anda atau buat situs Anda
                   sendiri.
                 </h1>
-                <a href="/#CekSertifikat">
-                  <div className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300">
-                    <h1 className="text-sm text-white font-normal text-center p-3">
-                      Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
-                      pendidikan
-                    </h1>
-                  </div>
-                </a>
+                <div
+                  className="ml-4 mt-4 cursor-pointer bg-green-700 rounded-md w-11/12 hover:bg-green-600 duration-300"
+                  onClick={() => goto(linkRef.current)}
+                >
+                  <h1 className="text-sm text-white font-normal text-center p-3">
+                    Hindari penipuan ijazah: Sertifikasi ijazah untuk lembaga
+                    pendidikan
+                  </h1>
+                </div>
               </div>
             </div>
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Header() {
   return (
     <>
-      <section className="min-h-screen overflow-hidden mt-10" id="home">
+      <section className="min-h-screen overflow-hidden mt-10 scroll-mb-4 md:scroll-mt-0" id="home">
         <div className="bg-[url('/img/Wpp.jpg')] bg-cover bg-center">
           <div className="bg-gray-700 bg-opacity-60 px-10 md:px-20 py-16">
             <div className="flex flex-col gap-6">

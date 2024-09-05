@@ -3,7 +3,7 @@ import Image from "next/image";
 const InternetOffline = () => {
   return (
     <>
-      <section className="w-full bg-gray-200 p-10 md:p-20" id="produk">
+      <section className="w-full bg-gray-200 p-10 scroll-mt-14 md:scroll-mt-0 md:p-20" id="produk">
         <div className="flex flex-col gap-10">
           <div className="">
             <h1 className="text-black text-3xl font-semibold">

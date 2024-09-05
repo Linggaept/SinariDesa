@@ -51,6 +51,7 @@ export default function LayAi() {
                   type="text"
                   placeholder="Your Text"
                   className="w-full rounded-md p-2 border-none bg-gray-200"
+                  required
                 />
                 <Button type="submit" className="bg-blue-600 text-white">
                   Send
