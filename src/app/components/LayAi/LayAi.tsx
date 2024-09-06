@@ -10,6 +10,7 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
+import Image from "next/image";
 import { FormEvent, useState } from "react";
 
 export default function LayAi() {
@@ -23,10 +24,15 @@ export default function LayAi() {
 
   return (
     <>
-      <div className="fixed bottom-10 right-10 bg-green-700 p-1 rounded-md">
-        <Button onClick={onOpen} className="bg-indigo-600 ">
-          <span className="text-black">Open Ai</span>
-        </Button>
+      <div className="fixed bottom-10 right-10 z-50">
+        <Image
+          onClick={onOpen}
+          src={"/img/logoAi.png"}
+          width={1000}
+          height={1000}
+          alt="logo"
+          className="w-14 animate-bounce shadow-lg shadow-indigo-600 cursor-pointer rounded-2xl"
+        />
       </div>
 
       <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
@@ -42,10 +48,7 @@ export default function LayAi() {
           </ModalBody>
 
           <ModalFooter>
-            <form
-              onSubmit={(e) => handleSubmit(e)}
-              className="flex w-full"
-            >
+            <form onSubmit={(e) => handleSubmit(e)} className="flex w-full">
               <div className="flex w-full gap-2">
                 <input
                   type="text"

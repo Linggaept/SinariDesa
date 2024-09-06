@@ -22,8 +22,16 @@ import Blockchain from "./components/Home/Blockchain";
 import LearningBook from "./components/Home/LearningBook";
 import Mentor from "./components/Home/Mentor";
 import LayAi from "./components/LayAi/LayAi";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   return (
     <>
       <title>Sinaridesa</title>
@@ -45,43 +53,61 @@ export default function Home() {
           <Definition />
 
           {/* Visi dan Misi */}
-          <VisiMisi />
+          <div data-aos="fade-up">
+            <VisiMisi />
+          </div>
 
           {/* Support */}
-          <Support />
+          <div data-aos="fade-up">
+            <Support />
+          </div>
 
           {/* Superiority */}
-          <Superiority />
+          <div data-aos="fade-up">
+            <Superiority />
+          </div>
 
           {/* PowerIoT */}
           <Country3T />
 
           {/* InternetOffline */}
-          <InternetOffline />
+          <div data-aos="fade-up">
+            <InternetOffline />
+          </div>
 
           {/* Belajar Cerdas */}
           <SmartAI />
 
           {/* TabelAi */}
-          <TabelAi />
+          <div data-aos="fade-up">
+            <TabelAi />
+          </div>
 
           {/* Blockchain */}
-          <Blockchain />
+          <div data-aos="fade-up">
+            <Blockchain />
+          </div>
 
           {/* LearningBook */}
-          <LearningBook />
+          <div data-aos="fade-up">
+            <LearningBook />
+          </div>
 
           {/* Traction */}
           <Traction />
 
           {/* Best Program */}
-          <BestProgram />
+          <div data-aos="fade-up">
+            <BestProgram />
+          </div>
 
           {/* Testimonial */}
           <Testimonial />
 
           {/* Mentor */}
-          <Mentor />
+          <div data-aos="fade-up">
+            <Mentor />
+          </div>
 
           {/* Footer */}
           <Footer />

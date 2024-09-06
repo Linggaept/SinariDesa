@@ -1,10 +1,16 @@
 import Image from "next/image";
+import AOS from 'aos';  
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Value() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
-      <section className="min-h-screen flex items-center">
-        <div className="md:p-20 p-5 flex flex-col md:grid xl:grid-cols-2 mx-auto w-3/4 gap-6">
+      <section data-aos="fade-up" className="min-h-screen flex items-center">
+        <div className="md:py-20 px-10 p-5 flex flex-col md:grid xl:grid-cols-2 mx-auto w-3/4 gap-6">
           <div className="flex flex-col gap-8 w-full md:w-3/4 mx-auto">
             <h1 className="text-green-700 font-bold text-2xl md:text-5xl  ">
               Value Utama Sinari Desa
@@ -21,7 +27,7 @@ export default function Value() {
               alt="Belajar di desa"
               width={500}
               height={500}
-              className="rounded-3xl aspect-[12/8] object-cover "
+              className="rounded-3xl aspect-[12/8] xl:aspect-[16/9] object-cover "
             />
           </div>
         </div>

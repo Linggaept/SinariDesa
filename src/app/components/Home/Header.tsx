@@ -1,10 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 import Link from "next/link";
+import AOS from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 
 export default function Header() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
-      <section className="min-h-screen overflow-hidden mt-10 scroll-mb-4 md:scroll-mt-0" id="home">
+      <section data-aos="fade-up" className="min-h-screen overflow-hidden mt-10 scroll-mb-4 md:scroll-mt-0" id="home">
         <div className="bg-[url('/img/Wpp.jpg')] bg-cover bg-center">
           <div className="bg-gray-700 bg-opacity-60 px-10 md:px-20 py-16">
             <div className="flex flex-col gap-6">
