@@ -9,7 +9,7 @@ const Country3T = () => {
           alt="Daerah 3T"
           width={1200}
           height={1200}
-          className=" object-cover w-full md:w-7/12 mx-auto"
+          className=" object-cover w-full md:w-7/12 mx-auto hover:scale-110 cursor-pointer duration-300"
         />
       </section>
     </>

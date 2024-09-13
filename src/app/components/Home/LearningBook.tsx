@@ -50,7 +50,7 @@ const LearningBook = () => {
   return (
     <>
       <section
-        className="p-10 md:py-20 lg:px-72 scroll-mt-14 md:scroll-mt-0"
+        className="p-10 md:py-20 lg:px-60 xl:px-72 scroll-mt-14 md:scroll-mt-0"
         id="Courses"
         data-aos="fade-up"
       >

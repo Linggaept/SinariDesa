@@ -21,7 +21,6 @@ import Blockchain from "./components/Home/Blockchain";
 import LearningBook from "./components/Home/LearningBook";
 import Mentor from "./components/Home/Mentor";
 import LayAi from "./components/LayAi/LayAi";
-import Aos from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {

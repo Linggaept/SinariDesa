@@ -33,7 +33,7 @@ export default function LayAi() {
           width={1000}
           height={1000}
           alt="logo"
-          className="w-14 animate-bounce shadow-lg shadow-indigo-600 cursor-pointer rounded-2xl"
+          className="w-14 h-auto animate-bounce shadow-lg shadow-indigo-600 cursor-pointer rounded-2xl"
         />
       </div>
 

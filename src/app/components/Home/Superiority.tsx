@@ -15,7 +15,7 @@ export default function Superiority() {
     Aos.init({
       duration: 1000,
     });
-  });
+  },[]);
   return (
     <>
       <section className="w-full bg-gray-900 min-h-screen" data-aos="fade-up">
@@ -24,11 +24,11 @@ export default function Superiority() {
             <h1 className="text-white font-bold text-3xl md:text-5xl text-center">
               Keunggulan Kami
             </h1>
-            <h1 className="text-gray-100 font-normal text-xs md:text-sm text-center">
+            <h2 className="text-gray-100 font-normal text-xs md:text-sm text-center">
               Sinari Desa Sebagai “The Centre of Innovation Youth Growth
               Ecosystem” pertama yang terlengkap & terpercaya memiliki banyak
               keunggulan diantaranya:
-            </h1>
+            </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="p-4 bg-green-700 rounded-xl md:flex gap-4">
@@ -37,10 +37,10 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Expert Trainer yang Kompeten di Bidangnya
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Peserta/Klient didampingi oleh Master Trainer dan Mentor yang
                   Kompeten dan Berpengalaman
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -50,10 +50,10 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Program yang Variatif & Update
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Tim kami selalu mengembangkan program dan kurikulum berbasis
                   kondisi dan tantangan terkini.
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -64,11 +64,11 @@ export default function Superiority() {
                   Mengembangkan & Memiliki Framework & Kurikulum Inovatif
                   Mandiri
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Program di design dengan menggunakan metode, kurikulum, &
                   lengkap dengan framework yang telah terbukti efektif dalam
                   peningkatan performa SDM
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -79,11 +79,11 @@ export default function Superiority() {
                   Pelayanan Secara Personal, Dilengkapi dengan Laporan Hasil
                   Belajar (LHB)
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Tim Kami selalu Berupaya untuk memberikan pelayanan terbaik
                   secara personal disetiap tahapan. Setiap Pelatihan dilengkapi
                   dengan Laporan Hasil Belajar (LHB) setiap Persona.
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -93,11 +93,11 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Valuable
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Konsep Program yang kami design bukan hanya menitik beratkan
                   pada kompetensi peserta, namun juga berdampak pada perubahan
                   behavioral dan sikap dalam bekerja/beraktivitas.
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -107,12 +107,12 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Pelatihan Lebih Fleksibel & Seru
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Konsep Program Pelatihan dapat disusun Sesuai Kebutuhan dan
                   Permintaan Klient, Baik Secara Virtual, Offline, maupun
                   Blended Learning. Kami juga mendesign pelatihan berbasis
                   Experiential Learning dalam penerapan proses pembelajaran.
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -122,11 +122,11 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Enrichment & Pembelajaran Berkelanjutan
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Peserta bukan hanya belajar saat proses pelatihan, namun juga
                   bisa melakukan proses pembelajaran/sharing berkelanjutan
                   dengan trainers melalui class/program yang kami kembangkan.
-                </h1>
+                </p>
               </div>
             </div>
 
@@ -136,13 +136,13 @@ export default function Superiority() {
                 <h1 className="text-white font-bold text-sm md:text-xl">
                   Menyediakan Ruang Tumbuh & Ruang Kontribusi
                 </h1>
-                <h1 className="text-white font-normal text-xs">
+                <p className="text-white font-normal text-xs">
                   Kami berkomitment untuk menyediakan Ruang Tumbuh Bagi
                   Peserta/klient melalui Semangat Bersama #TumbuhBerdampak
                   melalui Gerakan- Gerakan Positif, Menyediakan Ruang
                   Sharing/Program Bersama Alumni, & Hingga Program Berkarya
                   Bersama.
-                </h1>
+                </p>
               </div>
             </div>
           </div>

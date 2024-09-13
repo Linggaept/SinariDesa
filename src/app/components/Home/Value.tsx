@@ -17,11 +17,11 @@ export default function Value() {
             <h1 className="text-green-700 font-bold text-2xl md:text-5xl  ">
               Value Utama Sinari Desa
             </h1>
-            <h1 className="text-gray-600 font-normal text-xs md:text-xl mt-2 md:mt-10">
+            <p className="text-gray-600 font-normal text-xs md:text-xl mt-2 md:mt-10">
               Kesenjangan Signifikan dalam akses pendidikan dan keterampilan
               berkualitas antara anak-anak muda Desa dan Kota, yang menghambat
               potensi mereka untuk berkembang dan bersaing di pasar global.
-            </h1>
+            </p>
           </div>
           <div className="flex mt-10 md:mt-0 mx-auto">
             <Image

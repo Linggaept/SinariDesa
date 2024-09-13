@@ -11,11 +11,11 @@ const SmartAI = () => {
               Belajar Cerdas dengan AI{" "}
               <span className="text-indigo-600">Sinari Desa</span>
             </h1>
-            <h1 className="text-gray-600 text-md">
+            <p className="text-gray-600 text-md">
               AI SINARI DESA menggabungkan kecerdasan buatan yang kuat dengan
               antarmuka yang intuitif untuk mengungkap wawasan kunci dari
               Pelajaran atau materi dalam hitungan detik
-            </h1>
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 ">
@@ -60,7 +60,7 @@ const SmartAI = () => {
                   </h1>
                 </div>
 
-                <Link href={"/"}>
+                <Link href={""}>
                   <div className="bg-indigo-600 rounded-md w-full md:w-7/12 hover:bg-indigo-500 duration-300">
                     <h1 className="text-sm text-white font-normal text-center p-4 ">
                       Coba Gratis Sekarang

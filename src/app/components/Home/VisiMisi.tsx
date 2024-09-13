@@ -30,11 +30,11 @@ export default function VisiMisi() {
             </div>
             <div className="flex flex-col gap-4 md:gap-10">
               <h1 className="text-green-700 font-bold text-3xl md:text-5xl text-center md:text-left">Visi & Misi</h1>
-              <h1 className="text-gray-600 font-normal text-xs md:text-xl text-center md:text-left">
+              <p className="text-gray-600 font-normal text-xs md:text-xl text-center md:text-left">
                 menyetarakan peluang dan keterampilan mereka dengan anak-anak
                 muda di perdesaan sehingga mereka mampu bersaing di pasar
                 global.
-              </h1>
+              </p>
               <div className="grid grid-cols-1 xl:grid-cols-2 gap-4 text-center md:text-left">
                 <h1 className="flex p-4 bg-green-700 text-white font-normal items-center text-xs md:text-sm rounded-2xl w-46 md:w-56">
                   <span>

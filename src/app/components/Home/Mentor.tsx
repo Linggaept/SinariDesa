@@ -9,7 +9,7 @@ const Mentor = () => {
     Aos.init({
       duration: 1000,
     });
-  });
+  }, []);
   interface mentor {
     img: string;
     name: string;

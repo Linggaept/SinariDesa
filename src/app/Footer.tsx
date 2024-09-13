@@ -1,3 +1,4 @@
+"use client";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
@@ -26,7 +27,7 @@ export default function Footer() {
             <div className="flex mt-4">
               <h1 className="text-white font-normal text-sm flex gap-4 items-center">
                 <span>
-                  <IoMdCall className="text-yellow-500 w-10 h-10"/>
+                  <IoMdCall className="text-yellow-500 w-10 h-10" />
                 </span>
                 0822-3108-0085
               </h1>
@@ -69,7 +70,10 @@ export default function Footer() {
                 id="deskripsi"
                 className="h-20 rounded-md text-xs w-52 md:w-72"
               ></textarea>
-              <button className="bg-yellow-500 text-white  p-2 rounded-md w-52 md:w-72">
+              <button
+                onClick={(e) => e.preventDefault()}
+                className="bg-yellow-500 text-white  p-2 rounded-md w-52 md:w-72 hover:bg-yellow-400 duration-300"
+              >
                 Send
               </button>
             </form>
