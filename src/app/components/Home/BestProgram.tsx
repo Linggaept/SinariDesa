@@ -1,10 +1,18 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const BestProgram = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   return (
     <>
-      <section className="w-full bg-white p-2 md:p-10">
+      <section className="w-full bg-white p-2 md:p-10" data-aos="fade-up">
         <div className="bg-white w-3/4 mx-auto rounded-3xl">
           <h1 className="text-red-700 text-xl md:text-4xl mb-10 font-bold text-center mt-10 md:mt-0">
             Program Unggulan Kami

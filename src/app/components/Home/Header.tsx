@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import Link from "next/link";
 import AOS from "aos";
 import { useEffect } from "react";

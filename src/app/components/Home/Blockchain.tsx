@@ -1,24 +1,33 @@
 /* eslint-disable react/no-unescaped-entities */
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdCheckmarkCircle } from "react-icons/io";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import Aos from "aos";
 
 const Blockchain = () => {
-  const linkRef = useRef<HTMLDivElement > (null);
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
+
+  const linkRef = useRef<HTMLDivElement>(null);
 
   const goto = (current: HTMLDivElement | null) => {
     window.scrollTo({
       top: current?.offsetTop,
       left: 0,
       behavior: "smooth",
-    })
-  }
+    });
+  };
   return (
     <>
       <section
         className="p-10 md:px-44 md:py-10 min-h-screen mx-auto"
         id="Blockchain"
+        data-aos="fade-up"
       >
         {/* Section 1 */}
         <section
@@ -26,7 +35,7 @@ const Blockchain = () => {
           id="CekSertifikat"
           ref={linkRef}
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2" >
+          <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="flex flex-col gap-8 ">
               <div className="flex gap-2">
                 <Image

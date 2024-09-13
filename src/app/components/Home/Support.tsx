@@ -1,6 +1,15 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Support() {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   interface Pict {
     src: string;
   }
@@ -27,7 +36,7 @@ export default function Support() {
 
   return (
     <>
-      <section className="min-h-screen flex items-center">
+      <section className="min-h-screen flex items-center" data-aos="fade-up">
         <div className="flex flex-col mx-auto p-10 md:p-20 w-3/4 gap-8 ">
           <div className="flex">
             <h1 className="text-2xl md:text-3xl text-black font-bold text-center mx-auto">

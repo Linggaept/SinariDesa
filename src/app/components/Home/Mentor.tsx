@@ -1,7 +1,15 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
+import { useEffect } from "react";
 import { CgEditBlackPoint } from "react-icons/cg";
 
 const Mentor = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   interface mentor {
     img: string;
     name: string;
@@ -71,7 +79,11 @@ const Mentor = () => {
 
   return (
     <>
-      <section className="p-10 md:p-32 scroll-mt-14 md:scroll-mt-0" id="Mentor">
+      <section
+        className="p-10 md:p-32 scroll-mt-14 md:scroll-mt-0"
+        id="Mentor"
+        data-aos="fade-up"
+      >
         <div className="flex flex-col">
           <h1 className="text-4xl font-bold text-red-800 text-center mb-32">
             Dewan Penasihat, Pelatih Utama, & Mentor
@@ -79,10 +91,7 @@ const Mentor = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {mentors.map((mentor, index) => (
-              <div
-                key={index}
-                className="flex flex-col mx-auto gap-5 w-full"
-              >
+              <div key={index} className="flex flex-col mx-auto gap-5 w-full">
                 <div className="mx-auto bg-red-800 p-2 rounded-full">
                   <Image
                     src={`/img/${mentor.img}.jpg`}

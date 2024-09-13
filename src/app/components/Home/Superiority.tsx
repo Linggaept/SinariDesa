@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { GrUserExpert } from "react-icons/gr";
 import { GiStarSwirl } from "react-icons/gi";
@@ -7,10 +8,17 @@ import { GiPodiumWinner } from "react-icons/gi";
 import { GiStarKey } from "react-icons/gi";
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { FaSpaceAwesome } from "react-icons/fa6";
+import { useEffect } from "react";
+import Aos from "aos";
 export default function Superiority() {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   return (
     <>
-      <section className="w-full bg-gray-900 min-h-screen">
+      <section className="w-full bg-gray-900 min-h-screen" data-aos="fade-up">
         <div className="w-3/4 mx-auto p-5 md:p-20">
           <div className="flex flex-col gap-8">
             <h1 className="text-white font-bold text-3xl md:text-5xl text-center">
@@ -23,7 +31,6 @@ export default function Superiority() {
             </h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-            
             <div className="p-4 bg-green-700 rounded-xl md:flex gap-4">
               <GrUserExpert className="w-24 h-24 text-white mb-4 md:mb-0 " />
               <div className="flex flex-col gap-2 w-11/12">
@@ -83,7 +90,9 @@ export default function Superiority() {
             <div className="p-4 bg-green-700 rounded-xl md:flex gap-4">
               <GiStarKey className="w-24 h-24 text-white mb-4 md:mb-0" />
               <div className="flex flex-col gap-2 w-11/12">
-                <h1 className="text-white font-bold text-sm md:text-xl">Valuable</h1>
+                <h1 className="text-white font-bold text-sm md:text-xl">
+                  Valuable
+                </h1>
                 <h1 className="text-white font-normal text-xs">
                   Konsep Program yang kami design bukan hanya menitik beratkan
                   pada kompetensi peserta, namun juga berdampak pada perubahan

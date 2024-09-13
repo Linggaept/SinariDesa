@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/no-unescaped-entities */
-"use client";
 import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Image from "next/image";
@@ -22,19 +21,12 @@ import Blockchain from "./components/Home/Blockchain";
 import LearningBook from "./components/Home/LearningBook";
 import Mentor from "./components/Home/Mentor";
 import LayAi from "./components/LayAi/LayAi";
-import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 export default function Home() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-    });
-  });
   return (
     <>
-      <title>Sinaridesa</title>
       <main>
         {/* Navbar */}
         <Navbar />
@@ -53,61 +45,42 @@ export default function Home() {
           <Definition />
 
           {/* Visi dan Misi */}
-          <div data-aos="fade-up">
-            <VisiMisi />
-          </div>
+          <VisiMisi />
 
           {/* Support */}
-          <div data-aos="fade-up">
-            <Support />
-          </div>
+          <Support />
 
           {/* Superiority */}
-          <div data-aos="fade-up">
-            <Superiority />
-          </div>
+          <Superiority />
 
           {/* PowerIoT */}
           <Country3T />
 
           {/* InternetOffline */}
-          <div data-aos="fade-up">
-            <InternetOffline />
-          </div>
-
+          <InternetOffline />
           {/* Belajar Cerdas */}
           <SmartAI />
 
           {/* TabelAi */}
-          <div data-aos="fade-up">
-            <TabelAi />
-          </div>
+          <TabelAi />
 
           {/* Blockchain */}
-          <div data-aos="fade-up">
-            <Blockchain />
-          </div>
+          <Blockchain />
 
           {/* LearningBook */}
-          <div data-aos="fade-up">
-            <LearningBook />
-          </div>
+          <LearningBook />
 
           {/* Traction */}
           <Traction />
 
           {/* Best Program */}
-          <div data-aos="fade-up">
-            <BestProgram />
-          </div>
+          <BestProgram />
 
           {/* Testimonial */}
           <Testimonial />
 
           {/* Mentor */}
-          <div data-aos="fade-up">
-            <Mentor />
-          </div>
+          <Mentor />
 
           {/* Footer */}
           <Footer />

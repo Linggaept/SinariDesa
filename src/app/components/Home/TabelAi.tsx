@@ -1,6 +1,7 @@
-import React from "react";
+
 
 const TabelAi = () => {
+  
   return (
     <div className="w-full mx-auto p-10 md:px-44 md:py-16">
       <table className="max-w-screen-xl border-collapse">

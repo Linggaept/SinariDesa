@@ -1,6 +1,14 @@
+"use client";
+import Aos from "aos";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 const LearningBook = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   interface Card {
     img: string;
     owner: string;
@@ -41,8 +49,11 @@ const LearningBook = () => {
 
   return (
     <>
-      <section className="p-10 md:py-20 lg:px-72 scroll-mt-14 md:scroll-mt-0" id="Courses" >
-
+      <section
+        className="p-10 md:py-20 lg:px-72 scroll-mt-14 md:scroll-mt-0"
+        id="Courses"
+        data-aos="fade-up"
+      >
         <div className="flex flex-col gap-5">
           <h1 className="text-3xl font-bold text-center">
             Program Pembelajaran bersama{" "}
@@ -65,7 +76,7 @@ const LearningBook = () => {
                 />
                 <div className="flex flex-col">
                   <h1 className="text-gray-700 text-xs">{card.owner}</h1>
-                  <h1 className="text-gray-700 text-md font-semibold h-20 overflow-hidden w-3/4">
+                  <h1 className="text-gray-700 text-md font-semibold h-20 overflow-y-auto w-3/4">
                     {card.title}
                   </h1>
                 </div>

@@ -1,13 +1,22 @@
+"use client";
 import Image from "next/image";
 import { LiaHandshake } from "react-icons/lia";
 import { LiaLaptopSolid } from "react-icons/lia";
 import { IoPeopleOutline } from "react-icons/io5";
 import { TbAward } from "react-icons/tb";
+import { useEffect } from "react";
+import Aos from "aos";
 
 export default function VisiMisi() {
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
   return (
     <>
-      <section className="min-h-screen flex items-center" id="visi-misi">
+      <section className="min-h-screen flex items-center" id="visi-misi" data-aos="fade-up">
         <div className="p-10 md:p-20 items-center">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 md:gap-20 w-3/4 mx-auto items-center">
             <div className="">
