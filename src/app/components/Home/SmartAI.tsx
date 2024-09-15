@@ -1,10 +1,22 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const SmartAI = () => {
+  const [hovered, setHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
     <>
-      <section className="bg-gray-50 scroll-mt-14 md:scroll-mt-0" id="SmartAi" >
+      <section className="bg-gray-50 scroll-mt-14 md:scroll-mt-0" id="SmartAi">
         <div className="flex flex-col p-10 md:py-20 md:px-44 gap-10">
           <div className="flex flex-col items-center text-center gap-5">
             <h1 className="text-4xl font-bold text-black">
@@ -60,18 +72,20 @@ const SmartAI = () => {
                   </h1>
                 </div>
 
-                <Link href={""}>
-                  <div className="bg-indigo-600 rounded-md w-full md:w-7/12 hover:bg-indigo-500 duration-300">
-                    <h1 className="text-sm text-white font-normal text-center p-4 ">
-                      Coba Gratis Sekarang
-                    </h1>
-                  </div>
-                </Link>
+                <div
+                  className="bg-indigo-600 rounded-md w-full md:w-7/12 hover:bg-indigo-500 duration-300 cursor-help"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <h1 className="text-sm text-white font-normal text-center p-4 hover:font-bold ">
+                    {hovered ? "Click Icon Pojok Kanan Bawah" : "Coba Gratis Sekarang"}
+                  </h1>
+                </div>
               </div>
             </div>
 
             <div className="">
-              <Image 
+              <Image
                 src={"/img/Ai.png"}
                 alt="Smart AI"
                 width={500}
@@ -79,7 +93,6 @@ const SmartAI = () => {
                 className="object-cover aspect-square"
               />
             </div>
-
           </div>
         </div>
       </section>

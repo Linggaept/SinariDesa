@@ -11,7 +11,7 @@ export default function Header() {
   }, []);
   return (
     <>
-      <section data-aos="fade-up" className="min-h-screen overflow-hidden mt-10 scroll-mb-4 md:scroll-mt-0" id="home">
+      <section data-aos="fade-up" className="overflow-hidden mt-10 bg-red-300" id="home">
         <div className="bg-[url('/img/Wpp.jpg')] bg-cover bg-center">
           <div className="bg-gray-700 bg-opacity-60 px-10 md:px-20 py-16">
             <div className="flex flex-col gap-6">
