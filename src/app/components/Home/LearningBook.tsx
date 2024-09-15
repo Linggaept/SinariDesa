@@ -81,7 +81,7 @@ const LearningBook = () => {
                   </h1>
                 </div>
                 <div className="">
-                  <Link href={"/"}>
+                  <Link href={"/#Courses"}>
                     <div className="mt-4 bg-green-700 rounded-md w-1/2 cursor-pointer hover:bg-green-600 duration-300">
                       <h1 className="text-sm text-white font-normal text-center p-4">
                         Course Detail

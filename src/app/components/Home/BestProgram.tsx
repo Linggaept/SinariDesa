@@ -38,11 +38,9 @@ const BestProgram = () => {
           </div>
           <div className="bg-yellow-600 w-full p-5 rounded-b-3xl">
             <div className="block md:flex gap-4 justify-between">
-              <Link href={"/#"}>
-                <h1 className="cursor-pointer text-white font-normal text-xs md:text-sm bg-red-700 py-2 px-4 rounded-xl">
-                  Selengkapnya
-                </h1>
-              </Link>
+              <h1 className="cursor-pointer text-white font-normal text-xs md:text-sm bg-red-700 py-2 px-4 rounded-xl">
+                Selengkapnya
+              </h1>
               <h1 className="text-white font-medium text-xs md:text-sm flex items-center mt-4 md:mt-0">
                 Ayo Jadi “The Problem Solver” & Tumbuh Bersama SINARI DESA
               </h1>

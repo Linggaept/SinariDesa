@@ -68,7 +68,8 @@ export default function Footer() {
               <textarea
                 name="deskripsi"
                 id="deskripsi"
-                className="h-20 rounded-md text-xs w-52 md:w-72"
+                className="h-20 rounded-md text-xs w-52 md:w-72 p-2"
+                placeholder="Message"
               ></textarea>
               <button
                 onClick={(e) => e.preventDefault()}
