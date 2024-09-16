@@ -84,7 +84,7 @@ const Mentor = () => {
             Dewan Penasihat, Pelatih Utama, & Mentor
           </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-16">
             {mentors.map((mentor, index) => (
               <div key={index} className="flex flex-col mx-auto gap-5 w-full">
                 <div className="mx-auto bg-red-800 p-2 rounded-full">

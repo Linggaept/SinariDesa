@@ -13,7 +13,7 @@ const poppins = Poppins({
 
 // Metadata yang digunakan oleh Next.js untuk pengaturan SEO dan lainnya
 export const metadata: Metadata = {
-  title: "SinariDesa - The Center Of Village Inovation",
+  title: "SinariDesa - Dari Desa Untuk Dunia!",
   description:
     "Sinari Desa adalah sebuah platform TIK inovatif yang berfokus pada peningkatan keterampilan dan pengembangan diri anak-anak muda di desa",
   keywords: [

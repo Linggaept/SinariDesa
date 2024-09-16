@@ -39,11 +39,11 @@ const Blockchain = () => {
             <div className="flex flex-col gap-8 ">
               <div className="flex gap-2">
                 <Image
-                  src={"/svg/Blockchain.svg"}
+                  src={"/img/logo_blockchain.png"}
                   alt="Blockchain"
                   width={70}
                   height={70}
-                  className="items-start"
+                  className="items-start h-14 w-14"
                 />
                 <h1 className="text-black text-3xl lg:text-4xl xl:text-5xl w-3/4 md:w-7/12">
                   Sertifikasi Blockchain
@@ -74,13 +74,13 @@ const Blockchain = () => {
                   mudah diintegrasikan.
                 </h1>
 
-                <a href="#CekSertifikat">
-                  <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
+                <div className="mt-4 bg-green-700 rounded-md w-full md:w-7/12 hover:bg-green-600 duration-300">
+                  <a href="#CekSertifikat">
                     <h1 className="text-sm text-white font-normal text-center p-4">
                       Cek Sertifikatmu
                     </h1>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
 
