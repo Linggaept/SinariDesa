@@ -261,7 +261,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "/#SmartAi",
   },
   {
-    label: "Blockhain",
+    label: "Blockchain",
     href: "/#Blockchain",
   },
   {

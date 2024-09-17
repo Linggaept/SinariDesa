@@ -1,7 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const InternetOffline = () => {
-
   return (
     <>
       <section
@@ -31,6 +31,14 @@ const InternetOffline = () => {
               height={800}
               className="rounded-3xl ratio-square object-cover mx-auto"
             />
+          </div>
+
+          <div className="w-full flex items-center justify-center">
+            <Link href="https://wa.me/6285726631291" target="_blank">
+              <button className="bg-cyan-400 hover:bg-cyan-300 duration-300 hover:shadow-lg text-white px-4 py-2 md:py-4 rounded-md shadow-md w-44 md:w-56 md:text-md text-sm">
+                Pesan Sekarang
+              </button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-x divide-gray-200 bg-white gap-10 rounded-3xl">
