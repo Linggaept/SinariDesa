@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { GrUserExpert } from "react-icons/gr";
 import { GiStarSwirl } from "react-icons/gi";
 import { GiPuzzle } from "react-icons/gi";
@@ -8,17 +7,11 @@ import { GiPodiumWinner } from "react-icons/gi";
 import { GiStarKey } from "react-icons/gi";
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { FaSpaceAwesome } from "react-icons/fa6";
-import { useEffect } from "react";
-import Aos from "aos";
 export default function Superiority() {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-    });
-  },[]);
+
   return (
     <>
-      <section className="w-full bg-gray-900 min-h-screen" data-aos="fade-up">
+      <section className="w-full bg-gray-900 min-h-screen">
         <div className="w-3/4 mx-auto p-5 md:p-20">
           <div className="flex flex-col gap-8">
             <h1 className="text-white font-bold text-3xl md:text-5xl text-center">

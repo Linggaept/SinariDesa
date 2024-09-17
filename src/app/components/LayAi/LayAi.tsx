@@ -21,18 +21,22 @@ export default function LayAi() {
   const [message, setMessage] = useState<boolean>(false);
   const [message2, setMessage2] = useState<string>("");
   const [lockedMessage, setLockedMessage] = useState<string>("");
+  const [showAiMessage, setShowAiMessage] = useState<boolean>(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setMessage(true);
     setLockedMessage(message2);
+    setTimeout(() => {
+      setShowAiMessage(true);
+    }, 1000);
   };
 
   const Pengembangan = ({ message2 }: { message2: string }) => {
     return (
       <div className="flex flex-col gap-5">
         <div className="w-full items-end flex justify-end">
-          <div className="p-2 bg-gray-100 rounded-md w-1/2">
+          <div className="p-2 bg-gray-200 rounded-md duration-300">
             <Text
               fontWeight="normal"
               mb="1rem"
@@ -43,13 +47,13 @@ export default function LayAi() {
           </div>
         </div>
         <div className="w-full items-start flex justify-start">
-          <div className="p-2 item-start bg-gray-100 rounded-md">
+          <div className="p-2 item-start bg-gray-200 rounded-md duration-300">
             <Text
               fontWeight="semibold"
               mb="1rem"
               className="duration-300 text-left"
             >
-              Maaf, Ai Sedang Dalam Pengembangan
+              {showAiMessage &&  "Maaf, Ai Sedang Dalam Pengembangan"}
             </Text>
           </div>
         </div>
