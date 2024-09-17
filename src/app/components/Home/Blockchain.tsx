@@ -11,7 +11,7 @@ const Blockchain = () => {
     Aos.init({
       duration: 1000,
     });
-  });
+  }, []);
 
   const linkRef = useRef<HTMLDivElement>(null);
 
