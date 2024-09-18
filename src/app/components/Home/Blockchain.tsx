@@ -3,16 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdCheckmarkCircle } from "react-icons/io";
-import { useEffect, useRef } from "react";
-import Aos from "aos";
+import { useRef } from "react";
 
 const Blockchain = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-    });
-  }, []);
-
   const linkRef = useRef<HTMLDivElement>(null);
 
   const goto = (current: HTMLDivElement | null) => {
@@ -27,7 +20,6 @@ const Blockchain = () => {
       <section
         className="p-10 md:px-44 md:py-10 min-h-screen mx-auto"
         id="Blockchain"
-        data-aos="fade-up"
       >
         {/* Section 1 */}
         <section
