@@ -5,7 +5,7 @@ const Country3T = () => {
     <>
       <section className="md:p-20 p-8">
         <Image 
-          src={"/img/Daerah_3T.jpg"}
+          src={"/img/Daerah_3T.png"}
           alt="Daerah 3T"
           width={1200}
           height={1200}
