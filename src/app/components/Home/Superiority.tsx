@@ -1,4 +1,3 @@
-"use client";
 import { GrUserExpert } from "react-icons/gr";
 import { GiStarSwirl } from "react-icons/gi";
 import { GiPuzzle } from "react-icons/gi";
@@ -7,8 +6,9 @@ import { GiPodiumWinner } from "react-icons/gi";
 import { GiStarKey } from "react-icons/gi";
 import { GiLaurelsTrophy } from "react-icons/gi";
 import { FaSpaceAwesome } from "react-icons/fa6";
-export default function Superiority() {
 
+
+export default function Superiority() {
   return (
     <>
       <section className="w-full bg-gray-900 min-h-screen">

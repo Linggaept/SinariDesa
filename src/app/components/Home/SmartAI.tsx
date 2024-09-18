@@ -1,9 +1,9 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
 const SmartAI = () => {
+
   const [hovered, setHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -16,7 +16,10 @@ const SmartAI = () => {
 
   return (
     <>
-      <section className="bg-gray-50 scroll-mt-14 md:scroll-mt-0" id="SmartAi">
+      <section
+        className="bg-gray-50 scroll-mt-14 md:scroll-mt-0"
+        id="SmartAi"
+      >
         <div className="flex flex-col p-10 md:py-20 md:px-44 gap-10">
           <div className="flex flex-col items-center text-center gap-5">
             <h1 className="text-4xl font-bold text-black">
