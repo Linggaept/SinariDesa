@@ -22,10 +22,43 @@ import LearningBook from "./components/Home/LearningBook";
 import Mentor from "./components/Home/Mentor";
 import LayAi from "./components/LayAi/LayAi";
 import "aos/dist/aos.css";
+import Head from "next/head";
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>SinariDesa - Dari Desa Untuk Dunia!</title>
+        <meta
+          name="description"
+          content="SinariDesa adalah platform TIK inovatif yang membantu anak-anak muda di desa mengembangkan keterampilan mereka melalui teknologi seperti blockchain, AI, dan Internet offline."
+        />
+        <meta
+          name="keywords"
+          content="sinari desa, sinaridesa, sinardesa, teknologi pendidikan, sinar desa, teknologi, pendidikan, blockchain, internet offline, smart ai, desa modern, desa digital"
+        />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph meta tags */}
+        <meta
+          property="og:title"
+          content="SinariDesa - Dari Desa Untuk Dunia!"
+        />
+        <meta
+          property="og:description"
+          content="SinariDesa adalah platform TIK inovatif yang membantu anak-anak muda di desa mengembangkan keterampilan mereka melalui teknologi seperti blockchain, AI, dan Internet offline."
+        />
+        <meta property="og:url" content="https://sinaridesa.com" />
+        <meta property="og:image" content="/img/Logo_PNB_Sinaridesa.png" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="SinariDesa" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://sinaridesa.com" />
+
+        {/* Additional SEO optimizations */}
+        <meta name="author" content="SinariDesa Team" />
+      </Head>
       <main>
         {/* Navbar */}
         <Navbar />
