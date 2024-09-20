@@ -30,7 +30,7 @@ export default function Footer() {
                 <span>
                   <IoMdCall className="text-yellow-500 w-10 h-10" />
                 </span>
-                0822-3108-0085
+                +62 857-2663-1291
               </h1>
             </div>
             <div className="flex mt-4 items-center">
@@ -40,7 +40,6 @@ export default function Footer() {
                 </span>
                 <div className="flex flex-col">
                   <h1>SK. Kemenkumham RI</h1>
-                  <h1>AHU-027078.AH.01.30</h1>
                 </div>
               </div>
             </div>
