@@ -33,6 +33,7 @@ git clone https://Linggayahaha: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@github.c
 
 isi dengan ini(ganti sesuai kebutuhan)
 
+```bash
 server {
 
     root /home/~/SinariDesa;
@@ -51,6 +52,7 @@ server {
 
 }
 }
+```
 
 
 8. install pm2 dan setup (untuk background proses)
