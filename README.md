@@ -1,7 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -16,21 +12,51 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+DOCUMENTASI DEPLOY NEXTJS 14 APP ROUTER IN VM WITH NGINX (SSL WITH CERBOT)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+(sesuaikan ip, username, password)
 
-## Learn More
+1. login bash
+ssh username@ip (ssh user@12.12.212.123)
 
-To learn more about Next.js, take a look at the following resources:
+2. install node & npm VERSI LTS
+menggunakan mvc 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. clone project 
+git clone https://Linggayahaha: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@github.com/Linggaept/SinariDesa.git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. buka dan npm update dan npm install
+5. npm run build
+6. npm run start (testing)
+7. install dan setup nginxx untuk reverse proxy dan portnya 
+8. sudo nano /etc/nginx/conf.d/sinaridesa.conf
 
-## Deploy on Vercel
+isi dengan ini(ganti sesuai kebutuhan)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+server {
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    root /home/~/SinariDesa;
+    index index.html index.htm index.nginx-debian.html;
+
+    server_name 12.12.212.123;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
+}
+}
+
+
+8. install pm2 dan setup (untuk background proses)
+
+9. untuk setup ssl (menggunakan Certbot)
+	- sudo apt install certbot python3-certbot-nginx
+	- sudo certbot --nginx (isi sesuai arahan certbot) maka isi dari nginx akan diupdate otomatis oleh certbot
+
+10. restart nginx dan pm2 untuk apply semua config.
