@@ -35,11 +35,13 @@ isi dengan ini(ganti sesuai kebutuhan)
 
 ```bash
 server {
+    listen 80;
+    listen [::]:80;
 
     root /home/~/SinariDesa;
     index index.html index.htm index.nginx-debian.html;
 
-    server_name 12.12.212.123;
+    server_name your_domain_or_ip;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -49,8 +51,6 @@ server {
         proxy_set_header Host $host;
         proxy_cache_bypass $http_upgrade;
     }
-
-}
 }
 ```
 
