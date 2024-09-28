@@ -14,49 +14,77 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
-import { json } from "stream/consumers";
+import { GoogleGenerativeAI } from "@google/generative-ai"; // Import AI SDK
+
+const apiKey = process.env.NEXT_PUBLIC_OPENAI_API_KEY; // Ambil API key dari environment
+
+if (!apiKey) {
+  throw new Error("Missing OpenAI API key");
+}
+const genAI = new GoogleGenerativeAI(apiKey);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+
+const generationConfig = {
+  temperature: 1,
+  topP: 0.95,
+  topK: 64,
+  maxOutputTokens: 8192,
+  responseMimeType: "text/plain",
+};
 
 export default function LayAi() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [message, setMessage] = useState<boolean>(false);
+  const [messages, setMessages] = useState<{ user: string; ai: string }[]>([]);
   const [message2, setMessage2] = useState<string>("");
-  const [lockedMessage, setLockedMessage] = useState<string>("");
-  const [showAiMessage, setShowAiMessage] = useState<boolean>(false);
+  const [aiResponse, setAiResponse] = useState<string>("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setMessage(true);
-    setLockedMessage(message2);
-    setTimeout(() => {
-      setShowAiMessage(true);
-    }, 1000);
+
+    const chatSession = model.startChat({ generationConfig });
+    const result = await chatSession.sendMessage(message2);
+
+    // Tambahkan pesan ke array messages
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { user: message2, ai: result.response.text() },
+    ]);
+
+    setMessage2(""); // Reset input
   };
 
-  const Pengembangan = ({ message2 }: { message2: string }) => {
+  const Pengembangan = ({
+    messages,
+  }: {
+    messages: { user: string; ai: string }[];
+  }) => {
     return (
       <div className="flex flex-col gap-5">
-        <div className="w-full items-end flex justify-end">
-          <div className="p-2 bg-gray-200 rounded-md duration-300">
-            <Text
-              fontWeight="normal"
-              mb="1rem"
-              className="duration-300 text-right text-md"
-            >
-              {message2}
-            </Text>
+        {messages.map((msg, index) => (
+          <div key={index}>
+            <div className="w-full items-end flex justify-end mb-5">
+              <div className="p-2 bg-gray-200 rounded-md duration-300">
+                <Text
+                  fontWeight="normal"
+                  mb="1rem"
+                  className="duration-300 text-right text-md"
+                >
+                  {msg.user}
+                </Text>
+              </div>
+            </div>
+            <div className="w-full items-start flex justify-start">
+              <div className="p-2 item-start bg-gray-200 rounded-md duration-300">
+                <Text
+                  fontWeight="normal"
+                  className="duration-300 text-left"
+                >
+                  {msg.ai}
+                </Text>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="w-full items-start flex justify-start">
-          <div className="p-2 item-start bg-gray-200 rounded-md duration-300">
-            <Text
-              fontWeight="semibold"
-              mb="1rem"
-              className="duration-300 text-left"
-            >
-              {showAiMessage &&  "Maaf, Ai Sedang Dalam Pengembangan"}
-            </Text>
-          </div>
-        </div>
+        ))}
       </div>
     );
   };
@@ -80,9 +108,9 @@ export default function LayAi() {
         <ModalContent className="h-5/6">
           <ModalHeader className="text-indigo-600">Sinari Desa Ai</ModalHeader>
           <ModalCloseButton />
-          <ModalBody>
+          <ModalBody className="overflow-y-auto overflow-hidden">
             <Text fontWeight="semibold" mb="1rem" className="duration-300">
-              {message ? <Pengembangan message2={lockedMessage} /> : ""}
+              <Pengembangan messages={messages} />
             </Text>
           </ModalBody>
 
@@ -96,10 +124,9 @@ export default function LayAi() {
                   value={message2}
                   onChange={(e) => setMessage2(e.target.value)}
                   className="w-full rounded-md p-2 border-none bg-gray-200"
-                  disabled={message}
                   required
                 />
-                <Button type="submit" className="bg-blue-600 text-white" disabled={message}>
+                <Button type="submit" className="bg-blue-600 text-white">
                   Send
                 </Button>
               </div>
