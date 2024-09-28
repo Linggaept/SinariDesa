@@ -11,6 +11,7 @@ import {
   useDisclosure,
   Button,
   Text,
+  Spinner,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { FormEvent, useState } from "react";
@@ -37,10 +38,12 @@ export default function LayAi() {
   const [messages, setMessages] = useState<{ user: string; ai: string }[]>([]);
   const [message2, setMessage2] = useState<string>("");
   const [aiResponse, setAiResponse] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setLoading(true);
     const chatSession = model.startChat({ generationConfig });
     const result = await chatSession.sendMessage(message2);
 
@@ -51,6 +54,8 @@ export default function LayAi() {
     ]);
 
     setMessage2(""); // Reset input
+
+    setLoading(false);
   };
 
   const Pengembangan = ({
@@ -62,23 +67,37 @@ export default function LayAi() {
       <div className="flex flex-col gap-5">
         {messages.map((msg, index) => (
           <div key={index}>
-            <div className="w-full items-end flex justify-end mb-5">
-              <div className="p-2 bg-gray-200 rounded-md duration-300">
+            <div className="w-full flex justify-end mb-5 items-start">
+              <div className="p-2 bg-gray-200 rounded-md duration-300 w-8/12">
                 <Text
                   fontWeight="normal"
-                  mb="1rem"
-                  className="duration-300 text-right text-md"
+                  className="duration-300  text-md text-left"
                 >
                   {msg.user}
                 </Text>
               </div>
+              <div className="w-2/12">
+                <Image
+                  src={"/icon.png"}
+                  width={40}
+                  height={40}
+                  alt="logo"
+                  className="rounded-full"
+                />
+              </div>
             </div>
             <div className="w-full items-start flex justify-start">
-              <div className="p-2 item-start bg-gray-200 rounded-md duration-300">
-                <Text
-                  fontWeight="normal"
-                  className="duration-300 text-left"
-                >
+              <div className="w-2/12">
+                <Image
+                  src={"/img/logoAi.png"}
+                  width={40}
+                  height={40}
+                  alt="logo"
+                  className="rounded-full"
+                />
+              </div>
+              <div className="p-2 item-start bg-gray-200 rounded-md duration-300 w-8/12">
+                <Text fontWeight="normal" className="duration-300 text-left">
                   {msg.ai}
                 </Text>
               </div>
@@ -117,8 +136,7 @@ export default function LayAi() {
           <ModalFooter>
             <form onSubmit={(e) => handleSubmit(e)} className="flex w-full">
               <div className="flex w-full gap-2">
-                <input
-                  type="text"
+                <textarea
                   placeholder="Your Text"
                   name="text"
                   value={message2}
@@ -126,9 +144,21 @@ export default function LayAi() {
                   className="w-full rounded-md p-2 border-none bg-gray-200"
                   required
                 />
-                <Button type="submit" className="bg-blue-600 text-white">
-                  Send
-                </Button>
+                <button
+                  type="submit"
+                  className={`bg-indigo-600 rounded-md py-2 px-4 text-white ${
+                    loading ? "cursor-default" : "cursor-pointer"
+                  }`}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <div className="px-2 py-2">
+                      <Spinner color="white" size={"md"} />
+                    </div>
+                  ) : (
+                    "Send"
+                  )}
+                </button>
               </div>
             </form>
           </ModalFooter>
