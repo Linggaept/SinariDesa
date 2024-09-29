@@ -44,19 +44,9 @@ export default function RootLayout({
       style={{ scrollBehavior: "smooth" }}
     >
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "url": "https://www.sinaridesa.com",
-              "logo": "https://www.sinaridesa.com/icon.png",
-              "name": "Sinari Desa",
-            }),
-          }}
-        />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
       </head>
+      <title>Sinari Desa - Dari Desa Untuk Dunia!</title>
       <body className={poppins.className}>
         <Providers>{children}</Providers>
       </body>
