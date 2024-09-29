@@ -58,6 +58,8 @@ export default function Home() {
 
         {/* Additional SEO optimizations */}
         <meta name="author" content="SinariDesa Team" />
+        
+        <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
       </Head>
       <main>
         {/* Navbar */}
